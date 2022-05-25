@@ -1,0 +1,114 @@
+<html>
+ <head></head>
+ 
+ <body>
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <script type="text/javascript" src="smartik_chart.js"></script>
+    
+    <title></title>
+</head>
+
+<body onload="plotGraph()">
+    <div style="width:100%; min-height:300px; margin-top:30px; margin-left:50px">
+			<!--<div id="x-asis" style="width: 580px; background-color:#808080; height:3px;"></div>-->
+        <div style="display:block">
+            <div id="div-scale-current" style="width:500px; max-width:500px">
+                <table cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th colspan="10">
+                               Current Share Market Share (%)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">0</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">10</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">20</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">30</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">40</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">50</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">60</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">70</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">80</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">90</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">100</td>
+
+                    </tr>
+                    <tr>
+                        <td style="width:50px; max-width:50px; text-align:start; vertical-align:top">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div id="divcurrentgraph">
+                
+            </div>
+        </div>
+         <!--Previous graph -->
+
+         <div style="display:block">
+            <div id="div1" style="width:500px; max-width:500px">
+                <table cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th colspan="10">
+                               Previous Share Market Share (%)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">0</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">10</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">20</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">30</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">40</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">50</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">60</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">70</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">80</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">90</td>
+                        <td style="width:50px; max-width:50px;border-bottom:solid; border-bottom-color:#045000; text-align:start; vertical-align:bottom">100</td>
+
+                    </tr>
+                    <tr>
+                        <td style="width:50px; max-width:50px; text-align:start; vertical-align:top">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                        <td style="width:50px; max-width:50px; text-align:initial; vertical-align:top;">|</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div id="divpreviousgraph">
+                
+            </div>
+        </div>   
+          
+		</div>
+     
+</body>
+</html>
+
+
+ </body>
+</html>

@@ -1,0 +1,31 @@
+//$objWriter->save('C:\Users\Administrator\Desktop\workbook1.xlsx');
+		//C:\Users\Administrator\Desktop
+        
+       //header('Content-Type: application/vnd.ms-excel');
+       //header('Content-Disposition: attachment;filename="Supplier Statement_'.date('d M y').'.xml"');
+       //header('Cache-Control: max-age=0');
+	   //$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+	   //$objWriter->save('/usr/local/myWorkbooks/workbook1.xlsx');
+	    //header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		//header('Content-Disposition: attachment;filename="Supplier Statement_'.date('d M y').'.xml"');
+		//header('Cache-Control: max-age=0');
+
+		
+		//$objWriter->save('php://output'); 
+		
+		//Redirect output to a client’s web browser (Excel2007)
+		//header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		//header('Content-Disposition: attachment;filename="Supplier Statement_'.date('d M y').'.xml"');
+		//header('Cache-Control: max-age=0');
+		
+		//$objWriter->save('php://output');
+		//exit;
+		
+		
+		 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+		//$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+ 
+        // Sending headers to force the user to download the file
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="Product Movement_'.date('d M y').'.xls"');
+        header('Cache-Control: max-age=0');
